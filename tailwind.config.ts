@@ -2,40 +2,51 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        midnight: {
-          DEFAULT: "#0C1B36",
-          dark: "#060E1D",
-          light: "#14284D",
+        page: {
+          DEFAULT: "#200D0B",
+          secondary: "#351713",
+          surface: "#4A211A",
         },
-        porcelain: {
-          DEFAULT: "#F7F5F0",
-          pure: "#FFFFFF",
-          muted: "#EFECE6",
+        ivory: {
+          DEFAULT: "#F5E9D5",
+          card: "#F5E9D5",
+          muted: "#C6B1A2",
+          dark: "#200D0B",
         },
-        silver: {
-          DEFAULT: "#D9DFE8",
-          light: "#EEF2F6",
-          dark: "#A6B1C2",
+        terracotta: {
+          DEFAULT: "#A94E38",
+          light: "#B85A41",
+          dark: "#8A3D2C",
         },
-        cobalt: {
-          DEFAULT: "#6178FF",
-          hover: "#4D64F5",
+        copper: {
+          DEFAULT: "#C17C5A",
+          dark: "#6B3A2A",
+          deep: "#3A1B14",
         },
-        graphite: {
-          DEFAULT: "#222B3A",
-          muted: "#4A5568",
+        gold: {
+          DEFAULT: "#C7A15C",
+          light: "#DFC38A",
+          muted: "rgba(199, 161, 92, 0.4)",
         },
       },
+      borderColor: {
+        subtle: "rgba(245, 233, 213, 0.14)",
+      },
       fontFamily: {
-        serif: ["var(--font-editorial)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["'Bebas Neue'", "sans-serif"],
+        sans: ["'Inter'", "system-ui", "-apple-system", "sans-serif"],
+        emphasis: ["'Cormorant Garamond'", "Georgia", "serif"],
+        serif: ["'Cormorant Garamond'", "Georgia", "serif"],
+      },
+      boxShadow: {
+        card: "0 10px 30px -10px rgba(0, 0, 0, 0.5)",
+        glow: "0 0 25px rgba(199, 161, 92, 0.25)",
       },
     },
   },
